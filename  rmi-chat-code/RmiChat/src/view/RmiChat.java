@@ -88,6 +88,10 @@ public class RmiChat
 	private JTextField txtHost;
 	private JTextField txtPorta;
 
+	/**
+	 * Método principal da aplicação.
+	 * @param args Array de textos com os algumentos de entrada.
+	 */
 	public static void main(String[] args) 
 	{
 		EventQueue.invokeLater(new Runnable() 

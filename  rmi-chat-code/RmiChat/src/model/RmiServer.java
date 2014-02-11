@@ -14,11 +14,11 @@ import java.util.Observer;
 public class RmiServer extends Observable implements RmiService 
 {
 	/**
-	 * Número de clienets conectados ao servidor RMI.
+	 * NÃºmero de clienets conectados ao servidor RMI.
 	 */
 	public int clients = 0;
 	/**
-	 * Mensagem trocada entre a comunicação.
+	 * Mensagem trocada entre a comunicaÃ§Ã£o.
 	 */
 	public String message = "";
 	
@@ -31,11 +31,11 @@ public class RmiServer extends Observable implements RmiService
     private class WrappedObserver implements Observer, Serializable 
     {
     	/**
-    	 * Referência única desta classe.
+    	 * ReferÃªncia Ãºnica desta classe.
     	 */
         private static final long serialVersionUID = 1L;
         /**
-         * Cliente remoto que será observado.
+         * Cliente remoto que serÃ¡ observado.
          */
         private RemoteObserver ro = null;
         
@@ -51,7 +51,7 @@ public class RmiServer extends Observable implements RmiService
         /**
          * Atualiza o envio de mensagens aos clientes.
          * @since 15/01/2013
-         * @param o O servidor que monitora as modificações nos clientes.
+         * @param o O servidor que monitora as modificaÃ§Ãµes nos clientes.
          * @param arg Mensagem enviada ao servidor.
          */
         @Override 
@@ -71,10 +71,10 @@ public class RmiServer extends Observable implements RmiService
     }
     
     /**
-     * Adiciona os clientes que serão observados.
+     * Adiciona os clientes que serÃ£o observados.
      * @since 15/01/2013
-     * @param o O cliente que será monitorado.
-     * @throws RemoteException Exceção caso aconteça algum erro de comunicação.
+     * @param o O cliente que serÃ¡ monitorado.
+     * @throws RemoteException ExceÃ§Ã£o caso aconteÃ§a algum erro de comunicaÃ§Ã£o.
      */
     @Override 
     public void addObserver(RemoteObserver o) throws RemoteException 
@@ -89,7 +89,7 @@ public class RmiServer extends Observable implements RmiService
 	 * Envia uma mensagem aos clientes.
 	 * @since 15/01/2013
 	 * @param x Mensagem a ser enviada.
-	 * @throws RemoteException Exceção caso aconteça algum erro de comunicação.
+	 * @throws RemoteException ExceÃ§Ã£o caso aconteÃ§a algum erro de comunicaÃ§Ã£o.
 	 */
     @Override 
     public void receiveMessage(String x) throws RemoteException

@@ -12,22 +12,22 @@ import java.rmi.server.UnicastRemoteObject;
 public class RmiClient extends UnicastRemoteObject implements RemoteObserver 
 {
 	/**
-	 * Indica a estância do servidor RMI.
+	 * Indica a estÃ£ncia do servidor RMI.
 	 */
 	public static RmiService remoteService;
 	/**
-	 * Mensagem trocada entre a comunicação.
+	 * Mensagem trocada entre a comunicaÃ§Ã£o.
 	 */
 	public String message = "";
 	/**
-	 * Referência única desta classe.
+	 * ReferÃªncia Ãºnica desta classe.
 	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * Construtor da classe que inicializa a estância do servidor.
-	 * @param rmi Estância do servidor RMI.
-	 * @throws RemoteException Exceção caso aconteça algum erro de comunicação.
+	 * Construtor da classe que inicializa a estÃ¢ncia do servidor.
+	 * @param rmi EstÃ¢ncia do servidor RMI.
+	 * @throws RemoteException ExceÃ§Ã£o caso aconteÃ§a algum erro de comunicaÃ§Ã£o.
 	 */
     public RmiClient(RmiService rmi) throws RemoteException 
     {
@@ -38,9 +38,9 @@ public class RmiClient extends UnicastRemoteObject implements RemoteObserver
     /**
      * Atualiza o envio de mensagens ao servidor.
      * @since 15/01/2013
-     * @param observable O servidor que monitora as modificações nos clientes.
+     * @param observable O servidor que monitora as modificaÃ§Ãµes nos clientes.
 	 * @param updateMsg Mensagem enviada ao servidor.
-     * @throws RemoteException Exceção caso aconteça algum erro de comunicação.
+     * @throws RemoteException ExceÃ§Ã£o caso aconteÃ§a algum erro de comunicaÃ§Ã£o.
      */
     @Override
     public void update(Object observable, Object updateMsg) throws RemoteException 
